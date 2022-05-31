@@ -1,6 +1,6 @@
 class Stack:
     def __init__(self):
-        self.items=[]
+        self.items=[] #this is an empty list, this sets up the class to use python list and its methods
         
     def push(self, value):
         self.items.append(value)
