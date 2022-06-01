@@ -1,4 +1,4 @@
-#Binary search algorithm:
+#Binary search (sorted list) algorithm:
 
 def binary_search(the_list, target):
     lower_bound = 0
@@ -8,7 +8,6 @@ def binary_search(the_list, target):
         pivot = (lower_bound + upper_bound) // 2 # pivot is half-way between upper and lower bounds
         pivot_value = the_list[pivot] 
  
-
         if pivot_value == target:  # search over
             return pivot
 
@@ -22,6 +21,13 @@ def binary_search(the_list, target):
 
 
 my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-print(binary_search(my_list, 10))
-print(binary_search(my_list, 4))
-print(binary_search(my_list, 33))
+target= 3 #enter manually
+result = binary_search(my_list, target)
+
+if result == -1:
+    print("Your number is not in the list")
+
+else:
+    print("You number is located on index: ", result)
+
+

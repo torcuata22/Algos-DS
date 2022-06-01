@@ -14,8 +14,8 @@ class Queue:
             return None
         return self.items.pop(0)
     
-def show_queue(self):
-    print(self.items)
+    def show_queue(self):
+        print(self.items)
 
 q = Queue()
 q.enqueue('a')
