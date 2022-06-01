@@ -21,7 +21,7 @@ def sort_part(the_list, low_idx, pivot_idx):
             
     return pivot_idx
 
-#recursive function:
+#recursive function to check both sides of the pivot:
 def quicksort(the_list, low_idx, high_idx):
     if low_idx > high_idx:
         return
