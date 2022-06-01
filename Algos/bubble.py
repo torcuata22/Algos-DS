@@ -11,9 +11,9 @@ def bubble_sort(the_list):
                 the_list[j] = next
                 the_list[j+1] = item
                 
-    print(the_list, i, j)
+            print(the_list, i, j)
     
-bubble_sort(unsorted_list)
+#bubble_sort(unsorted_list)
 
 #added list_changed flag to track if list changes with any i loop iteration
 def bubblesort(the_list):
@@ -34,3 +34,4 @@ def bubblesort(the_list):
         print(list_changed)
         if list_changed == False:
             break
+bubblesort(unsorted_list)        
