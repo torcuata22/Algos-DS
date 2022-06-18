@@ -1,20 +1,20 @@
 class Queue:
     def __init__(self):
-        self.items=[]
+        self.items=[] #empty list (no items yet)
         
     def size(self):
-            return len(self.items)
+            return len(self.items) #size of the queue
     
     def enqueue(self, item):
-        self.items.append(item)
+        self.items.append(item) #add an element using list method
         
     def dequeue(self):
-        if self.size() == 0:
+        if self.size() == 0: #if the list is empty there's nothing to remove
             return None
-        return self.items.pop(0)
+        return self.items.pop(0) #removes first element of the list (because it's a queue)
     
     def show_queue(self):
-        print(self.items)
+        print(self.items) 
         
 
 class IceCreamShop:
