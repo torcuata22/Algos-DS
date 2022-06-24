@@ -22,5 +22,6 @@ def timeConversion(s):
         # add 12 to hours and remove PM
         return str(int(s[:2]) + 12) + s[2:8]
 
+
     
  
