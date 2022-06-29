@@ -22,7 +22,7 @@ def insertNodeAtTail(head, data):
     current = head #current value is the head
     if head == None: #if the list has no head it is empty
         return SinglyLinkedListNode(data) #return the new node created 
-    while current.next != None: #if the current node is not null, we traverse the list to the tail
+    while current.next != None: #if the current node is not null, we're not in the tail yet tail, when this node is null, we've reached the last element of the list and the loop will break
         current = current.next
-    current.next = SinglyLinkedListNode(data)
+    current.next = SinglyLinkedListNode(data) #creates new node in tail
     return head
