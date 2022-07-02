@@ -1,9 +1,11 @@
-#Using recursion:
-def reversePrint(head):
-    if head == None: #empty LList
-        return
-    reversePrint(head.next) #Traverse to the end and then starts travelling back
-    print(head.data)
-    
-#Using list slicing:
-
+def reverse(head):
+    prv = None
+    cur = head
+    next = head.next
+    while cur != None:
+        next = cur.next
+        cur.next = prv
+        prv = cur
+        cur = next
+    head = prv
+    return head
