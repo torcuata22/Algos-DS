@@ -6,7 +6,7 @@ def getNode(head, positionFromTail):
     pointer1 = head
     pointer2 = head
     for i in range (positionFromTail):
-        pointer1 = pointer1.next
+        pointer1 = pointer1.next #pointer1 travels alone here, so there is a distance differential between 1 and 2 now equal to the positionFromTail argument
         
     while pointer1.next != None:
         pointer1 = pointer1.next
