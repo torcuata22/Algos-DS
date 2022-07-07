@@ -1,4 +1,4 @@
-#to delete a node in a linked list you just skip is and Python delestes it automatically
+#to delete a node in a linked list you just skip it and Python deletes it automatically
 #Two cases: position = head (we skip the head and assign second node as head)
 #OR position not head, in whihc case we need to traverse the linked list and find the node we're going to skip
 def deleteNode(head, position):
