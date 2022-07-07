@@ -61,7 +61,7 @@ def sortedInsert(head, data):
         while cur.next != None and cur.data < data:
             cur = cur.next 
         #if we are at the end of the list, we need to insert data at the end:
-        if cur.next == None:
+        if cur.next == None and cur.data < data:
             cur.next = node
             node.prev = cur
         #to insert data at a specific position:
