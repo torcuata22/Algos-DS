@@ -6,6 +6,7 @@ def preOrder(root):
     if root != None:
         print (root, end = " ")
     #to traverse to left of root: 
-    preOrder(root.left)
+        preOrder(root.left)
     #to traverse to right of root:
-    preOrder(root.right)
+        preOrder(root.right)
+    
