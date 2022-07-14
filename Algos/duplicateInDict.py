@@ -3,5 +3,5 @@ items = [{'name':'Nikki'},{'name':'Kate'}, {'name':'James'}, {'name':'Nikki'}, {
 unique = []
 for item in items:
     if item not in unique:
-        unique.apend(item)
-    print (unique)
+        unique.append(item)
+print (unique)
