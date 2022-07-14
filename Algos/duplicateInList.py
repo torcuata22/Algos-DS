@@ -19,8 +19,14 @@ def count_dupes(my_list):
     counts = dict(Counter(my_list))
     dupes = {key:value for key, value in counts.items() if value >1}
     print (dupes)
+
+#To remove duplicate in a list: use set() function
+def unique_vals(my_list):
+    unique = list(set(my_list))
+    print(unique)
     
     
 find_dupes(the_list)
 count_dupes(the_list)
+unique_vals(the_list)
 
