@@ -21,3 +21,22 @@ while True:
         reverseString(s, start, len(s)-1)
         break
         
+        
+#LEETCODE:
+
+#Method 1: Slice notation
+
+def reverse_String(s):
+    n = len(s)-1
+    return s[n::-1]
+
+#Method 2: .join
+def one_line_reverse(s):
+    return " ".join(reversed(s)) #reversed is a built-in function, and wrap "join" around it
+ 
+#Method 3: For Loop
+def reverseLoop(s):
+   result=''
+   for i in s: #loop over every character 
+       result = i + result #prepend i to result so we invert (because it goes from 1-n, but with prepend will return n-1)
+   return result 
