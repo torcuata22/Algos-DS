@@ -26,6 +26,6 @@ class KthLargest:
             heapq.heappop(self.minHeap)
         return self.minHeap[0]
     
-#in min Heap, minimum value always at zero index
+#in minHeap, minimum value always at zero index
         
 
