@@ -8,9 +8,6 @@
 # for each branch, select new mid point and use as root, update pointers until next pointer = null
 #time complexity o(n) because it is recursive, space complexity is o(logn)
 
-from logging.config import valid_ident
-from turtle import left
-
 
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):

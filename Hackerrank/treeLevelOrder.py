@@ -1,4 +1,4 @@
-#print the tree level by level insted of noded. For this, use queue, this way we cna explore all levels
+#print the tree level by level instead of nodes. For this, use queue, this way we cna explore all levels
 
 from collections import deque
 def levelOrder(root):
