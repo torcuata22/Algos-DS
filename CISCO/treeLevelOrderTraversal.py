@@ -21,7 +21,8 @@ class Solution:
                     level.append(node.val)
                     q.append(node.left)
                     q.append(node.right)
-            res.append(level)
+            if level: #make sure level is not empty 
+                res.append(level)
         return res    
             
                     
