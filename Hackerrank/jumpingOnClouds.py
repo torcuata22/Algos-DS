@@ -11,7 +11,7 @@ def jumpingClouds(c,k):
     i=0
     while True:
         energy = energy-1-2*c[i] #cost of one jump, if c[i]=1 energy drops -2, otherwise c[i]=0
-        #we need to make the route self-closing to avoid infiite loop
+        #we need to make the route self-closing to avoid infinite loop
         i=(i+k)%n
         if i == 0:
             break
