@@ -7,7 +7,7 @@ def bubble_sort(the_list):
             item = the_list[j]
             next = the_list[j+1]
             
-            if item > next:
+            if item > next: #if item to the left is greater than the item to its right
                 the_list[j] = next
                 the_list[j+1] = item
                 
