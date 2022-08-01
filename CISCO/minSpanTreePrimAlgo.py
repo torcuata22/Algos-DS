@@ -31,10 +31,15 @@ class Solution:
         visit = set()
         minH = [[0,0]]
         while len(visit) < N:
-            cost, i = heapq.heappop(minH)
-            if i in visit:
+            cost, i = heapq.heappop(minH) #pop min. value
+            if i in visit: #verifies that we haven't visited that node, if we have, skip it
                 continue
-            res+= cost
+            res+= cost #add cost of the node to res (result)
+            visit.add(i) #if i wasn't in visit, we add it now so we don't repeat
+            for neiCost, nei in adj[i]: #neiCos, nei are neighbor cost and neighbor number respectively
+                if nei not in visit:
+                    heapq.heappush(minH, [neiCost, nei])
+        return res
 
         
         
