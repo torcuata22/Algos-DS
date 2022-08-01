@@ -14,7 +14,7 @@ def getMissingNum (arr, n):
 #Method 1: needs binary properties, the x OR operator (exclusive OR) then I 
 # array ^ range of numbers --> the repeating numbers cancel each other out and 
 #ony missing number remains
-#time comlaxity; o(1)
+#time complexity; o(1)
 
 def getMissingBinary(arr,n):
   diff= arr ^ n
@@ -27,3 +27,11 @@ def missing_number(self,nums:list[int])->int:
     for i in range(len(nums)):
         res += (i-nums[i])
     return res 
+
+
+def MissingNumber(self,array,n):
+    sum_n= n*(n+1)//2
+    sum_a = sum(array)
+    missing = abs(sum_a - sum_n)
+    return missing
+        
