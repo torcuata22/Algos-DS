@@ -28,7 +28,7 @@ def networkDelayTime(self, times:list[list[int]], n:int, k:int) -> int:
                 heapq.heappush(minHeap, (w1+w2,n2))
     return t if len(visit) == n else -1
 
-#Geeks for Geeks solution:
+#Geeks for Geeks solution for Dijkstra's Algorithm:
 class Graph():
      
     def __init__(self, vertices):
