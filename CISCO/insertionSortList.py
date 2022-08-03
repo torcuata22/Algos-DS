@@ -17,7 +17,7 @@ class Solution:
                 prev, cur = cur, cur.next 
                 continue
             
-            temp = head
+            temp = dummy
             while cur.val > temp.next.val:
                 temp = temp.next
             prev.next = cur.next 
