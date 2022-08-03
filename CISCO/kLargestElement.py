@@ -17,13 +17,13 @@ class KthLargest:
         self.minHeap, self.k = nums, k #array right now to turn into heap:
         heapq.heapify(self.minHeap) 
         while len(self.minHeap) > k:
-            heapq.heappop(self.minHeap) #heappop pops smaller item of the heap
+            heapq.heappop(self.minHeap) #heappop pops smaller item of the heap k times, until largest kth remains
          
         
     def add (self, val: int)->int:
         heapq.heappush(self.minHeap,val)
         if len(self.minHeap)> self.k:
-            heapq.heappop(self.minHeap)
+            heapq.heappop(self.minHeap) 
         return self.minHeap[0]
     
 #in minHeap, minimum value always at zero index
