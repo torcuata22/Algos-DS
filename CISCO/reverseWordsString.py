@@ -2,10 +2,11 @@
 #s=string to be inverted, start=0, end=last index (len(s)-1)
 
 def reverseString(s, start, end):
+    start,end = 0, len(s)-1
     while start < end:
         s[start], s[end] = s[end], s[start] #assign start to last and end to first (reversing string)
-        start = start+1
-        end -=1
+        start, end = start+1, end-1
+ #time complexity: O(n), memory: O(1)    
         
 #test:
 s = "I don't like this very much"
@@ -21,7 +22,18 @@ while True:
         reverseString(s, start, len(s)-1)
         break
         
-        
+ 
+#Using a Stack: takes more space than the previous one: O(n)  
+def reverseString(self, s:list[int]) ->None:
+    stack = []
+    for c in s:
+         stack.append(c)
+    i = 0
+    while stack:
+        s[i] = stack.pop()
+        i +=1
+     
+             
 #LEETCODE:
 
 #Method 1: Slice notation
