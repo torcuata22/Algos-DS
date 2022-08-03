@@ -8,7 +8,7 @@
 #[5,4] are the first k elements, we will rotate last
 #[1,2.3] we will reverse first in place -->[4,5,1,2,3]
 #also, we need to normalize k in case it is > than len(nums), so k=k%len(nums)
-
+#FIrst we inverse whole array, then first K elements, then k through len(nums)
 class Solution:
     def rotate(self, nums:list[int])->None:
         k=k%len(nums) 
@@ -21,4 +21,11 @@ class Solution:
         while l < r:
             nums[l], nums[r] = nums[r], nums[l]
             l,r = l+1, r-1
+            
+        l,r = k, len(nums)-1
+        while l < r:
+            nums[l], nums[r] = nums[r], nums[l]
+            l,r = l+1, r-1
+            
+            
             
