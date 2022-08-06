@@ -22,7 +22,7 @@ def findShortestSubArray( nums):
         if x not in left: 
             left[x] = i
         right[x] = i
-        count[x] = count.get(x, 0) + 1 #get() is a dictionary method takes key name (mandatory) and value(optional)
+        count[x] = count.get(x, 0) + 1 #get() is a dictionary method takes key name (mandatory) and value(optional)count the number of occurrences of each character: if it already has a count for a given character, get returns it (so it's just incremented by one), else get returns 0 (so the incrementing correctly gives 1 at a character's first occurrence in the string).
 
     ans = len(nums)
     degree = max(count.values())
