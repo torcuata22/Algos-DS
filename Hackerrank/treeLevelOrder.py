@@ -12,4 +12,4 @@ def levelOrder(root):
         if root.right: #append right element if there is one
             q.append(root.right)
             
-        #this will repeqt until len(q)=0
+        #this will repeat until len(q)=0
