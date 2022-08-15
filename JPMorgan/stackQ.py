@@ -1,46 +1,35 @@
-#Implement a queue using Stack (completely counter intuitive)
+#Implement a queue using Stack (completely counter intuitive). Use two queues
 
 from collections import deque
 
 class Stack:
     def __init__(self):
-        self.q = deque
+       self.q1 = deque()
+       self.q2 = deque() 
+       
+    def push(self, x):
+        self.q1.append(x)
         
-    def push(self, data):
-        s= len(self.q)
-        self.q.append(data) #push the current element
-        for i in range (s): #pop all previous elements and put them after current element: first we pop, then we append
-            self.q.append(self.q.popleft())
-    
-    #we need to remove the top element because queues are FIFO and stacks are LIFO
     def pop(self):
-        if not self.q:
-            print("No elements")
-        else:
-            self.q.popleft()
-            
-    #finally we need to return the top of the stack
-    def top(self):
-        if not self.q:
+        #if q1 is empty:
+        if not self.q1:
             return
-        return self.q[0]
+        while len(self.q1) != 1:
+            self.q2.append(self.q1.popleft()) #append popped items form q1 to q2, leaving 1 element in q1 (that's why len(q1)==1)
+            top=self.q1[0]
+            self.q2.append(self.q1.popleft()) #we are popping the only element in q1 and appending it to q2)
+            
+            #swap the names of the queues:
+            self.q1, self.q2 = self.q2, self.q1
+            return top
+        
+        def size(self):
+            return len(self.q1)
+# 
+ 
     
-    #driver code:
-    if __name__ == '__main__':
-        st = Stack()
-    st.push(40)
-    st.push(50)
-    st.push(70)
-    print(st.top())
-    st.pop()
-    print(st.top())
-    st.pop()
-    print(st.top())
-    st.push(80)
-    st.push(90)
-    st.push(100)
-    print(st.top())
-    st.pop()
-    print(st.top())
-    st.pop()
-    print(st.top())
+
+  
+            
+            
+            
